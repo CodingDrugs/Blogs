@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <%- include('./partials/nav.ejs') %>
+
+   
+</head>
+<body>
+    <h1 class="header">List of Blogs</h1>
+    <div class="list">
+        <% blogs.forEach(blog=>{%>
+            <% const path=blog.photo[0].path.slice(6); console.log(path); %>
+            <div class="blog-item">
+                <img src="<%= path %>" alt="<%= blog.title %>">
+                <div class="content">
+                    <a href="/app/v1/blogs/list/<%=blog._id%>"><%=blog.title%></a>
+    
+                    <p><%=blog.snippet%></p>
+    
+                </div>
+            </div>
+          
+        <%}) %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

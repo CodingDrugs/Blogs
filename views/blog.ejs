@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <%- include('./partials/nav.ejs') %>
+
+   
+</head>
+<body>
+    <h1 class="header">Blog</h1>
+    <% const path=blog.photo[0].path.slice(6) %>
+    <img src="<%= path %>" alt="<%= blog.title %>" class="blog-img">
+    <div class="blog-content">
+        <h2 id="blog-title"><%= blog.title%></h2>
+        <h4><%= blog.snippet%></h4>
+        <p><%= blog.description%></p>
+    </div>
+    <form action="/app/v1/blogs/list/<%= blog._id%>?_method=DELETE" method="post">
+        <center>
+            <button type="submit">Delete</button>
+        </center>
+        
+        
+    </form>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

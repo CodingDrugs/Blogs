@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@200;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+nav{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    padding: 0px 40px;
+}
+
+nav>ul{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.logo{
+    width: 70px;
+    display: flex;  
+}
+
+.logo>img{
+    width: 100%;
+}
+
+ul>li>a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+
+footer{
+    width: 100%;    
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+/* ............. */
+
+.header{
+    text-align: center;
+    line-height: 80px;
+}
+
+/* .content{
+    min-height: 80vh;
+} */
+
+/* .........List of blogs */
+
+
+.list{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px 0px;
+    
+}
+
+.blog-item{
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px #d6d1d1;
+    padding: 10px;
+}
+.blog-item>img{
+    width: 400px;
+    aspect-ratio: 1 / 1 ;
+    object-fit: cover;
+}
+
+.blog-item{
+    text-align: justify;
+}
+
+/* Single Blog */
+
+.blog-content{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 80%;
+    text-align: justify;
+}
+
+.blog-img{
+    display: flex;
+    margin: 0px auto;
+    width: 80%;
+}
+
+#blog-title{
+    text-align: center;
+}
+
+
+/* create blog */
+
+.create-blog-form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #d4d1d1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.create-blog-form input[type=text]{
+    background-color: #fefefe;
+    width: 90%;
+    border: 1px solid  #d4d1d1;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.create-blog-form label{
+    margin: 20px 0px 10px 0;
+}
+
+.create-blog-form textarea{
+    width: 90%;
+    border: 1px solid  #d4d1d1;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.create-blog-form button,button{
+    padding: 5px 10px;
+    margin: 20px;
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px #cc208e;
+    cursor: pointer;
+}
